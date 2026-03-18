@@ -36,8 +36,8 @@ body {
     margin: auto;
 }
 .project img{
-    width: 400px;
-    height: 200px;
+    width: 300px;
+    height: 300px;
     margin: 10px;
     border: 2px solid black; 
     display: block;
