@@ -27,9 +27,17 @@ body {
 .attention {
     font-weight: bold;
 }
+#project1 img{
+    width: 400px;
+    height: 200px;
+    margin: 10px;
+    border: 2px solid black; 
+    display: block;
+    margin: auto;
+}
 .project img{
-    width: 300px;
-    height: 100px;
+    width: 400px;
+    height: 200px;
     margin: 10px;
     border: 2px solid black; 
     display: block;
