@@ -1,82 +1,98 @@
-
 <!DOCTYPE html>
-<html>
-  <head>
-    <link rel="stylesheet" href="styles.css">
-    <title>CSCE 190: Gaozheng Wu </title>
-  </head>
-  <body>
-    <h1> Gaozheng Wu </h1>
-      <div class="about">
-        <h2>About me:</h2>
-        <p>Mission Statement Here</p>
-      </div>
-      <div class="skills">
-        <h2>Skills:</h2>
-        <p>no skills avaliable</p>
-        <ul>
-          <li>Skill 1</li>
-          <li>Skill 2</li>
-        </ul>
-      </div>
-      <div class="projects">
-        <h2>Projects:</h2>
-        <!-- Problem Statement Assignment -->
-        <section id="project1">
-          <a href="files/statement.pdf"><h3>Problem Statement</h3></a>
-          <a href="files/statement.pdf"><img src="images/images.jpeg"></a>
-          <p>While many websites or apps have their own way of saving recipes, there are none that are able to consolidate them nor are they able to integrate with ones day to day to lives by suggesting purchases or keeping track of what ingredients one may have.</p>
-        </section>
-        <section class="project">
-                <a href="files/Harold_Lee.pdf"><h3>Persona</h3></a>
-                <a href="files/Harold_Lee.pdf"><img src="images/HaroldImage.jpeg"></a>
-                <p>
-                    Our group created a few persona that may be part of our audience
-                </p>
-            </section>
-            <section class="project">
-          <a href="files/StoryBoard.pdf"> <h3>Storyboard</h3></a>
-          <a href="files/StoryBoard.pdf"><img src="images/SketchImage.jpeg"></a>
-          <p>
-           Our group brainstormed some scenarios in which our apps could be used in the lives of our Personas
-          </p>
-        </section>
-        <section class="project">
-          <a href="files/Sketches.pdf"> <h3>Sketches</h3></a>
-          <a href="files/Sketches.pdf"><img src="images/ActualSketchImage.jpeg"></a>
-          <p>
-           Our group created some ideas on what the app would look like 
-          </p>
-        </section>
-            <section class="project">
-          <a href="files/Affinity_Diagram.pdf"> <h3>Affinity Diagram</h3></a>
-          <a href="files/Affinity_Diagram.pdf"><img src="images/Affinity_Diagram.jpeg"></a>
-          <p>
-           A few ideas that we considered prior to creating our app
-          </p>
-        </section>
-        <section class="project">
-          <a href="files/paperdemocsce190.pdf"> <h3>Paper Prototype</h3></a>
-          <a href="files/paperdemocsce190.pdf"><img src="images/VideoImage.png"></a>
-          <p>
-           <ul>
-            <li><h5>Feedback:</h5></li>
-            <li>A clearer back button</li>
-            <li>Make clearer what is clickable</li>
-            <li>Make a blacklist of ingredients</li>
-            <li>Create a favourite list of items</li>
-            <li>A way to rate recipe and give feedback</li>
-            <li>Provide a clear difficulty level for each recipe</li>
-           </ul>
-          </p>
-        </section>
-            <p>Members: Gaozheng, Cayden, Gabriella, Steeno, Peyton, Le Hoa</p>
-      </div>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Portfolio Template 1</title>
+<style>
+  body { font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif; margin: 0; padding: 0; background: #f4f7f6; color: #333; }
+  header { background: #2c3e50; color: white; padding: 1.5rem 0; text-align: center; }
+  nav { display: flex; justify-content: center; background: #34495e; padding: 0.5rem; flex-wrap: wrap; }
+  nav button { background: none; border: none; color: white; padding: 12px 24px; cursor: pointer; font-size: 16px; margin: 5px; border-radius: 4px; transition: background 0.3s; }
+  nav button:hover, nav button.active { background: #1abc9c; font-weight: bold; }
+  main { max-width: 900px; margin: 2rem auto; padding: 0 1rem; background: white; box-shadow: 0 4px 12px rgba(0,0,0,0.05); border-radius: 8px; min-height: 50vh; }
+  section { padding: 3rem 2rem; display: none; animation: fadeIn 0.4s; }
+  section.active { display: block; }
+  @keyframes fadeIn { from { opacity: 0; } to { opacity: 1; } }
+  
+  h2 { border-bottom: 2px solid #1abc9c; padding-bottom: 10px; margin-top: 0; }
+  .profile-layout { display: flex; align-items: center; gap: 20px; flex-wrap: wrap; }
+  .profile-layout img { width: 150px; height: 150px; background: #eee; border-radius: 50%; object-fit: cover; }
+  .project-grid { display: grid; grid-template-columns: repeat(auto-fill, minmax(280px, 1fr)); gap: 20px; }
+  .project-card { border: 1px solid #eaeaea; border-radius: 8px; padding: 15px; text-align: center; background: #fafafa; }
+  .project-card img { width: 100%; height: 160px; background: #ddd; object-fit: cover; border-radius: 4px; margin-bottom: 10px; }
+  .contact-links a { display: block; margin: 15px 0; color: #2980b9; text-decoration: none; font-size: 1.1rem; }
+</style>
+</head>
+<body>
 
-      <div class="contact">
-        <h2>Contacts:</h2>
-        <p>gaozheng@email.sc.edu</p>
+<header>
+  <h1>Gaozheng's Portfolio Website</h1>
+</header>
+<nav>
+  <button class="tab-btn active" onclick="openTab(event, 'about')">About Me</button>
+  <button class="tab-btn" onclick="openTab(event, 'skills')">Skills</button>
+  <button class="tab-btn" onclick="openTab(event, 'projects')">Highlighted Projects</button>
+  <button class="tab-btn" onclick="openTab(event, 'contact')">Contact me!</button>
+</nav>
+
+<main>
+  <section id="about" class="active">
+    <h2>About Me</h2>
+    <div class="profile-layout">
+      <img src="files/profile.png" alt="Profile Picture">
+      <div>
+        <p>Hello! Welcome to my personal portfolio. My name is Gaozheng, a Sophmore at University of South Carolina. I love learning and finding new ways to innovate technology. My personal mission is to [Your Mission Statement].</p>
+        <a href="files/resume.pdf" target="_blank">Check out my resume for more information!</a> <!-- _blank opens in a new tab -->
       </div>
-      <!-- comment-->
-  </body>
+    </div>
+  </section>
+
+  <section id="skills">
+    <h2>Skills</h2>
+    <p><strong>Coding Proficiencies:</strong> Skill 1, Skill 2, Skill 3, Skill 4</p>
+    <p><strong>Additional Skills:</strong> Skill 5, Skill 6, Skill 7</p>
+  </section>
+
+  <section id="projects">
+    <h2>Highlighted Projects</h2>
+    <div class="project-grid">
+      <div class="project-card">
+        <h3><a href="#">CSCE 190</a></h3>
+        <a href="#"><img src="files/Harold_Lee.pdf" alt="Project 1"></a>
+        <p>Creating a proposed solution to help those who may not have time to think about cooking or shoping.</p>
+      </div>
+    </div>
+  </section>
+
+  <section id="contact">
+    <h2>Contact me!</h2>
+    <div class="contact-links">
+      <a href="https://linkedin.com">LinkedIn: [Your LinkedIn Username]</a>
+      <a href="https://github.com">Github: wuga79-a11y</a>
+      <a href="mailto:email@email.com">Email: wuga79@gmail.com</a>
+    </div>
+  </section>
+</main>
+
+<script>
+// JavaScript to handle the tab switching
+function openTab(evt, tabName) {
+  let i, sections, tablinks;
+  
+  sections = document.getElementsByTagName("section");
+  for (i = 0; i < sections.length; i++) {
+    sections[i].classList.remove("active");
+  }
+  
+  tablinks = document.getElementsByClassName("tab-btn");
+  for (i = 0; i < tablinks.length; i++) {
+    tablinks[i].classList.remove("active");
+  }
+  
+  document.getElementById(tabName).classList.add("active");
+  evt.currentTarget.classList.add("active");
+}
+</script>
+</body>
 </html>
